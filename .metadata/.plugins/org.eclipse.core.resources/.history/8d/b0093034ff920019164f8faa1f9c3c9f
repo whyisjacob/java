@@ -1,0 +1,47 @@
+package emailapp;
+
+import java.util.Scanner;
+
+public class Email {
+	private String firstName;
+	private String lastName;
+	private String password;
+	private String department;
+	private String alternateEmail;
+	private int mailboxCapacity;
+	
+	//constructor to receive first name and last name
+	public Email(String firstName, String lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		System.out.println("EMAIL CREATED "+this.firstName + this.lastName+"@mycompany.com");
+		
+		this.department = setDepartment();
+		System.out.println("The department is: " + this.department)
+	}
+	
+	private String setDepartment() {
+		System.out.print("Enter the Department \n 1 for sales \n 2 for development \n 3 for accounting \n 0 for none");
+		Scanner in = new Scanner(System.in);
+		int depChoice = in.nextInt();
+		if(depChoice == 1) {
+			return "Sales";
+		} else if(depChoice == 2) {
+			return "Development";
+		} else if (depChoice == 3) {
+			return "Accounting";
+		} else {
+			return "No department";
+		}
+	}
+	
+	//ask user for department
+	
+	//generate random password for new email account
+	
+	//set mailbox capacity
+	
+	//set alternate email from user
+	
+	//Change password
+}
